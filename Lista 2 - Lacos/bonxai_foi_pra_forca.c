@@ -2,7 +2,8 @@
 #include <string.h>
 
 int primo(int numero){
-    for(int i = 2; i < numero; i++){
+    int i;
+    for(i = 2; i < numero; i++){
         if(numero % i == 0){
             return 0;
         }
@@ -29,7 +30,8 @@ int main(){
 
     scanf("%s", palavra);
     tamanho = strlen(palavra);
-    for(int i=0; i<tamanho; i++){
+    int i;
+    for(i=0; i<tamanho; i++){
         somatorio = somatorio + palavra[i];
     }
     
