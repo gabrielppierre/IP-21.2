@@ -5,9 +5,10 @@ int main(){
     int x=0, y=0, z=0, n, m;
     int xi=0, yi=0, zi=0;
     int dec=0, contador_movimentos=0;
-    
+    int i, j;
     scanf("%d %d", &n, &m);
-    for(int i=0; i < n * 4; i++){
+    
+    for(i=0; i < n * 4; i++){
         scanf("%d", &dec);
         z = dec%10;//145
         dec = dec/10;//14
@@ -29,11 +30,11 @@ int main(){
         aux = yi - y;
         if(aux > 0){
             contador_movimentos += aux;
-            for(int j=0; j<aux; j++)
+            for(j=0; j<aux; j++)
                 printf("b");
         }else{
             contador_movimentos += (aux * (-1));
-            for(int j=0; j>aux; j--)
+            for(j=0; j>aux; j--)
                 printf("c");
         }  
         yi=y;
@@ -41,11 +42,11 @@ int main(){
         aux = zi - z;
         if(aux > 0){
             contador_movimentos += aux;
-            for(int j=0; j<aux; j++)
+            for(j=0; j<aux; j++)
                 printf("t");
         }else{
             contador_movimentos += (aux * (-1));
-            for(int j=0; j>aux; j--)
+            for(j=0; j>aux; j--)
                 printf("f");
         }
         zi=z;
